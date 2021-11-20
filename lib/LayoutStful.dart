@@ -11,7 +11,7 @@ class LayoutStful extends StatefulWidget {
 
 const primeColor = Color.fromARGB(200, 255, 178, 102);
 
-//var _dinamicImage = AssetImage("");
+var _dinamicImage = AssetImage("imgs/base2.png");
 
 class _LayoutStfulState extends State<LayoutStful> {
   @override
@@ -26,12 +26,11 @@ class _LayoutStfulState extends State<LayoutStful> {
         backgroundColor: primeColor,
       ),
       body: Container(
-        padding: EdgeInsets.all(5),
         width: double.infinity,
+        padding: EdgeInsets.only(top: 16, bottom: 16),
+        decoration: BoxDecoration(border: Border.all(width: 3, color: Colors.green)),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Padding(padding: EdgeInsets.only(top: 5),),
             Text(
                 "p o r t a l",
             style: TextStyle(
@@ -39,22 +38,20 @@ class _LayoutStfulState extends State<LayoutStful> {
               fontWeight: FontWeight.w500,
               color: Color.fromARGB(200, 204, 102, 0),
             ),),
-            /*Image(image: _dinamicImage,
-            height: 170,),*/
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                GestureDetector(
-
-                ),
-                GestureDetector(
-
-                  ),
-                GestureDetector(
-
-                ),
-              ],
-            ),
+            Image(image: _dinamicImage,
+            height: 150,),
+           Row(
+             children: <Widget>[
+               Image.asset("imgs/fogo.png",
+               height: 90,),
+               Image.asset("imgs/agua.png",
+                 height: 90,),
+               Image.asset("imgs/vento.png",
+                 height: 90,),
+               Image.asset("imgs/terra.png",
+                 height: 90,)
+             ],
+           ),
           ],
         ),
       ),
