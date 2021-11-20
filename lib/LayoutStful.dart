@@ -42,7 +42,11 @@ class _LayoutStfulState extends State<LayoutStful> {
             Image(image: _dinamicImage,
             height: 180,),
             Row(
-
+              children: <Widget>[
+                GestureDetector(),
+                GestureDetector(),
+                GestureDetector(),
+              ],
             ),
           ],
         ),
