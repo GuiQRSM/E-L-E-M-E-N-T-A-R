@@ -13,6 +13,8 @@ const primeColor = Color.fromARGB(200, 255, 178, 102);
 
 var _dinamicImage = AssetImage("imgs/base2.png");
 
+var _textDinamic = "Resultado final";
+
 class _LayoutStfulState extends State<LayoutStful> {
   @override
   Widget build(BuildContext context) {
@@ -32,24 +34,35 @@ class _LayoutStfulState extends State<LayoutStful> {
         child: Column(
           children: <Widget>[
             Text(
-                "p o r t a l",
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w500,
-              color: Color.fromARGB(200, 204, 102, 0),
-            ),),
+              "p o r t a l",
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: Color.fromARGB(200, 204, 102, 0),
+              ),),
+            Padding(padding: EdgeInsets.only( top:5 ),
+            ),
             Image(image: _dinamicImage,
-            height: 150,),
+              height: 150,),
+           Text(
+             "$_textDinamic",
+             style: TextStyle(
+               fontSize: 15,
+               fontWeight: FontWeight.w500,
+               color: Color.fromARGB(200, 204, 102, 0),
+             ),
+           ),
            Row(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: <Widget>[
                Image.asset("imgs/fogo.png",
-               height: 90,),
+               height: 70,),
                Image.asset("imgs/agua.png",
-                 height: 90,),
+                 height: 70,),
                Image.asset("imgs/vento.png",
-                 height: 90,),
+                 height: 70,),
                Image.asset("imgs/terra.png",
-                 height: 90,)
+                 height: 70,)
              ],
            ),
           ],
