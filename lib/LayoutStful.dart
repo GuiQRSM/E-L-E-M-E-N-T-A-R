@@ -40,7 +40,10 @@ class _LayoutStfulState extends State<LayoutStful> {
             ),),
             Padding(padding: EdgeInsets.only(top: 10),),
             Image(image: _dinamicImage,
-            height: 180,)
+            height: 180,),
+            Row(
+
+            ),
           ],
         ),
       ),
