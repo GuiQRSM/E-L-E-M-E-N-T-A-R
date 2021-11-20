@@ -40,18 +40,22 @@ class _LayoutStfulState extends State<LayoutStful> {
                 fontWeight: FontWeight.w500,
                 color: Color.fromARGB(200, 204, 102, 0),
               ),),
-            Padding(padding: EdgeInsets.only( top:5 ),
+            Padding(padding: EdgeInsets.only( top:15 ),
             ),
             Image(image: _dinamicImage,
               height: 150,),
+            Padding(padding: EdgeInsets.only( top:60 ),
+            ),
            Text(
              "$_textDinamic",
              style: TextStyle(
-               fontSize: 15,
+               fontSize: 20,
                fontWeight: FontWeight.w500,
                color: Color.fromARGB(200, 204, 102, 0),
              ),
            ),
+            Padding(padding: EdgeInsets.only( top:70 ),
+            ),
            Row(
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: <Widget>[
