@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'dart:math';
 
 class LayoutStful extends StatefulWidget {
   const LayoutStful({Key? key}) : super(key: key);
@@ -15,10 +16,18 @@ var _dinamicImage = AssetImage("imgs/base2.png");
 
 var _textDinamic = "Resultado final";
 
+
+
 void _callImage(String ComandUser) {
 
-var comandUSer = ["fogo", "agua", "vento", "terra"];
-  
+  var choiseUser = ComandUser;
+
+  var arrayElements = ["fogo", "agua", "vento", "terra"];
+  var randomElements = Random().nextInt(4);
+  var choiseConfronter = arrayElements[randomElements];
+
+  print("Comando do usuario: " + choiseUser);
+  print("Comando da CPU: " + choiseConfronter);
 }
 
 class _LayoutStfulState extends State<LayoutStful> {
@@ -49,7 +58,7 @@ class _LayoutStfulState extends State<LayoutStful> {
             Padding(padding: EdgeInsets.only( top:15 ),
             ),
             Image(image: _dinamicImage,
-              height: 150,),
+              height: 170,),
             Padding(padding: EdgeInsets.only( top:60 ),
             ),
            Text(
