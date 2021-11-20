@@ -11,7 +11,7 @@ class LayoutStful extends StatefulWidget {
 
 const primeColor = Color.fromARGB(200, 255, 178, 102);
 
-
+var _dinamicImage = AssetImage("imgs/base.png");
 
 class _LayoutStfulState extends State<LayoutStful> {
   @override
@@ -30,7 +30,17 @@ class _LayoutStfulState extends State<LayoutStful> {
         width: double.infinity,
         child: Column(
           children: <Widget>[
-
+            Padding(padding: EdgeInsets.only(top: 5),),
+            Text(
+                "p o r t a l",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w500,
+              color: Color.fromARGB(200, 204, 102, 0),
+            ),),
+            Padding(padding: EdgeInsets.only(top: 10),),
+            Image(image: _dinamicImage,
+            height: 180,)
           ],
         ),
       ),
