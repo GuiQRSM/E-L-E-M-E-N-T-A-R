@@ -26,9 +26,10 @@ class _LayoutStfulState extends State<LayoutStful> {
         backgroundColor: primeColor,
       ),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all( 5),
         width: double.infinity,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Padding(padding: EdgeInsets.only(top: 5),),
             Text(
@@ -38,14 +39,20 @@ class _LayoutStfulState extends State<LayoutStful> {
               fontWeight: FontWeight.w500,
               color: Color.fromARGB(200, 204, 102, 0),
             ),),
-            Padding(padding: EdgeInsets.only(top: 10),),
             Image(image: _dinamicImage,
-            height: 180,),
+            height: 170,),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                GestureDetector(),
-                GestureDetector(),
-                GestureDetector(),
+                GestureDetector(
+
+                ),
+                GestureDetector(
+
+                  ),
+                GestureDetector(
+
+                ),
               ],
             ),
           ],
