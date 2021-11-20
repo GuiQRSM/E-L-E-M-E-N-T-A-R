@@ -15,6 +15,12 @@ var _dinamicImage = AssetImage("imgs/base2.png");
 
 var _textDinamic = "Resultado final";
 
+void _callImage(String ComandUser) {
+  
+  
+  
+}
+
 class _LayoutStfulState extends State<LayoutStful> {
   @override
   Widget build(BuildContext context) {
@@ -60,18 +66,22 @@ class _LayoutStfulState extends State<LayoutStful> {
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: <Widget>[
                GestureDetector(
+                 onTap: ()=> _callImage("fogo"),
                  child:Image.asset("imgs/fogo.png",
                    height: 70,),
                ),
                GestureDetector(
+                 onTap: () => _callImage("agua"),
                  child:  Image.asset("imgs/agua.png",
                    height: 70,),
                ),
               GestureDetector(
+                onTap: () => _callImage("vento"),
                 child:  Image.asset("imgs/vento.png",
                   height: 70,),
               ),
               GestureDetector(
+                onTap: () => _callImage("terra"),
                 child:  Image.asset("imgs/terra.png",
                   height: 70,),
               ),
