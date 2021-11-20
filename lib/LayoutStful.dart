@@ -59,14 +59,22 @@ class _LayoutStfulState extends State<LayoutStful> {
            Row(
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: <Widget>[
-               Image.asset("imgs/fogo.png",
-               height: 70,),
-               Image.asset("imgs/agua.png",
-                 height: 70,),
-               Image.asset("imgs/vento.png",
-                 height: 70,),
-               Image.asset("imgs/terra.png",
-                 height: 70,)
+               GestureDetector(
+                 child:Image.asset("imgs/fogo.png",
+                   height: 70,),
+               ),
+               GestureDetector(
+                 child:  Image.asset("imgs/agua.png",
+                   height: 70,),
+               ),
+              GestureDetector(
+                child:  Image.asset("imgs/vento.png",
+                  height: 70,),
+              ),
+              GestureDetector(
+                child:  Image.asset("imgs/terra.png",
+                  height: 70,),
+              ),
              ],
            ),
           ],
