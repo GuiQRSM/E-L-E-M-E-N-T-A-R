@@ -9,7 +9,7 @@ class LayoutStful extends StatefulWidget {
   _LayoutStfulState createState() => _LayoutStfulState();
 }
 
-const primeColor = Color.fromARGB(200, 255, 178, 102);
+const primeColor = Color.fromARGB(200, 89, 8, 105);
 
 var _dinamicImage = AssetImage("imgs/base2.png");
 
@@ -29,7 +29,7 @@ class _LayoutStfulState extends State<LayoutStful> {
         title: Text("E L E M E N T A R",
         style: TextStyle(
           fontWeight: FontWeight.w800,
-          color: Color.fromARGB(200, 204, 102, 0)
+          color: Color.fromARGB(250, 171, 9, 128)
         ),),
         backgroundColor: primeColor,
       ),
@@ -40,11 +40,11 @@ class _LayoutStfulState extends State<LayoutStful> {
         child: Column(
           children: <Widget>[
             Text(
-              "p o r t a l",
+              "CONFROTER",
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 20,
                 fontWeight: FontWeight.w500,
-                color: Color.fromARGB(200, 204, 102, 0),
+                color: Color.fromARGB(250, 171, 9, 128),
               ),),
             Padding(padding: EdgeInsets.only( top:15 ),
             ),
@@ -57,7 +57,7 @@ class _LayoutStfulState extends State<LayoutStful> {
              style: TextStyle(
                fontSize: 20,
                fontWeight: FontWeight.w500,
-               color: Color.fromARGB(200, 204, 102, 0),
+               color: Color.fromARGB(250, 171, 9, 128),
              ),
            ),
             Padding(padding: EdgeInsets.only( top:70 ),
