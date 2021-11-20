@@ -16,8 +16,8 @@ var _dinamicImage = AssetImage("imgs/base2.png");
 var _textDinamic = "Resultado final";
 
 void _callImage(String ComandUser) {
-  
-  
+
+var comandUSer = ["fogo", "agua", "vento", "terra"];
   
 }
 
@@ -40,7 +40,7 @@ class _LayoutStfulState extends State<LayoutStful> {
         child: Column(
           children: <Widget>[
             Text(
-              "CONFROTER",
+              "c o n f r o t e r",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
