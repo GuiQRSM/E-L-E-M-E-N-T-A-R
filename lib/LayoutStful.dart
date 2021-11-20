@@ -28,6 +28,7 @@ void _callImage(String ComandUser) {
 
   print("Comando do usuario: " + choiseUser);
   print("Comando da CPU: " + choiseConfronter);
+
 }
 
 class _LayoutStfulState extends State<LayoutStful> {
