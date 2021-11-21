@@ -16,7 +16,7 @@ class _LayoutStfulState extends State<LayoutStful> {
 
   var _dinamicImage = AssetImage("imgs/base2.png");
 
-  var _textDinamic = "Resultado final";
+  var _textDinamic = "v e r e d i t o";
 
   void _callImage(String ComandUser) {
     var choiseUser = ComandUser;
@@ -82,6 +82,7 @@ class _LayoutStfulState extends State<LayoutStful> {
     }
 
   }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,8 +116,8 @@ class _LayoutStfulState extends State<LayoutStful> {
              "$_textDinamic",
              textAlign: TextAlign.center,
              style: TextStyle(
-               fontSize: 20,
-               fontWeight: FontWeight.w500,
+               fontSize: 25,
+               fontWeight: FontWeight.w600,
                color: Color.fromARGB(250, 171, 9, 128),
              ),
            ),
