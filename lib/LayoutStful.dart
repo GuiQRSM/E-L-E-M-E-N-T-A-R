@@ -10,8 +10,6 @@ class LayoutStful extends StatefulWidget {
   _LayoutStfulState createState() => _LayoutStfulState();
 }
 
-
-
 class _LayoutStfulState extends State<LayoutStful> {
 
   var primeColor = Color.fromARGB(200, 89, 8, 105);
@@ -19,8 +17,6 @@ class _LayoutStfulState extends State<LayoutStful> {
   var _dinamicImage = AssetImage("imgs/base2.png");
 
   var _textDinamic = "Resultado final";
-
-
 
   void _callImage(String ComandUser) {
 
@@ -33,11 +29,29 @@ class _LayoutStfulState extends State<LayoutStful> {
     print("Comando do usuario: " + choiseUser);
     print("Comando da CPU: " + choiseConfronter);
 
-    /*switch(choiseConfronter) {
-    case "fogo" :
-      _dinamicImage = AssetImage("imgs/fogo.png");
-    break;
-  }*/
+    switch(choiseConfronter) {
+      case "fogo" :
+        setState(() {
+          this._dinamicImage = AssetImage("imgs/fogo.png");
+        });
+        break;
+
+      case "agua" :
+        setState(() {
+          this._dinamicImage = AssetImage("imgs/agua.png");
+        });
+        break;
+
+      case "vento" :
+        this._dinamicImage = AssetImage("imgs/vento.png");
+        break;
+
+      case "terra" :
+        setState(() {
+          this._dinamicImage = AssetImage("imgs/terra.png");
+        });
+        break;
+    }
 
   }
 
