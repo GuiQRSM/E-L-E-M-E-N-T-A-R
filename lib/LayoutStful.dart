@@ -46,7 +46,6 @@ class _LayoutStfulState extends State<LayoutStful> {
       body: Container(
         width: double.infinity,
         padding: EdgeInsets.only(top: 16, bottom: 16),
-        decoration: BoxDecoration(border: Border.all(width: 3, color: Colors.green)),
         child: Column(
           children: <Widget>[
             Text(
