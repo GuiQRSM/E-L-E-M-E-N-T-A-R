@@ -10,28 +10,37 @@ class LayoutStful extends StatefulWidget {
   _LayoutStfulState createState() => _LayoutStfulState();
 }
 
-const primeColor = Color.fromARGB(200, 89, 8, 105);
 
-var _dinamicImage = AssetImage("imgs/base2.png");
-
-var _textDinamic = "Resultado final";
-
-
-
-void _callImage(String ComandUser) {
-
-  var choiseUser = ComandUser;
-
-  var arrayElements = ["fogo", "agua", "vento", "terra"];
-  var randomElements = Random().nextInt(4);
-  var choiseConfronter = arrayElements[randomElements];
-
-  print("Comando do usuario: " + choiseUser);
-  print("Comando da CPU: " + choiseConfronter);
-
-}
 
 class _LayoutStfulState extends State<LayoutStful> {
+
+  var primeColor = Color.fromARGB(200, 89, 8, 105);
+
+  var _dinamicImage = AssetImage("imgs/base2.png");
+
+  var _textDinamic = "Resultado final";
+
+
+
+  void _callImage(String ComandUser) {
+
+    var choiseUser = ComandUser;
+
+    var arrayElements = ["fogo", "agua", "vento", "terra"];
+    var randomElements = Random().nextInt(4);
+    var choiseConfronter = arrayElements[randomElements];
+
+    print("Comando do usuario: " + choiseUser);
+    print("Comando da CPU: " + choiseConfronter);
+
+    /*switch(choiseConfronter) {
+    case "fogo" :
+      _dinamicImage = AssetImage("imgs/fogo.png");
+    break;
+  }*/
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
