@@ -89,7 +89,7 @@ class _LayoutStfulState extends State<LayoutStful> {
         title: Text("E L E M E N T A R",
         style: TextStyle(
           fontWeight: FontWeight.w800,
-          color: Color.fromARGB(250, 171, 9, 128)
+          color: Color.fromARGB(250, 209, 152, 207)
         ),),
         backgroundColor: primeColor,
       ),
