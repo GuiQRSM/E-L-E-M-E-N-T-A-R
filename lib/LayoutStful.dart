@@ -19,7 +19,6 @@ class _LayoutStfulState extends State<LayoutStful> {
   var _textDinamic = "Resultado final";
 
   void _callImage(String ComandUser) {
-
     var choiseUser = ComandUser;
 
     var arrayElements = ["fogo", "agua", "vento", "terra"];
@@ -29,7 +28,7 @@ class _LayoutStfulState extends State<LayoutStful> {
     print("Comando do usuario: " + choiseUser);
     print("Comando da CPU: " + choiseConfronter);
 
-    switch(choiseConfronter) {
+    switch (choiseConfronter) {
       case "fogo" :
         setState(() {
           this._dinamicImage = AssetImage("imgs/fogo.png");
@@ -53,8 +52,36 @@ class _LayoutStfulState extends State<LayoutStful> {
         break;
     }
 
-  }
+    if (
+        (choiseUser == "fogo" && choiseConfronter == "vento") ||
+        (choiseUser == "agua" && choiseConfronter == "fogo") ||
+        (choiseUser == "agua" && choiseConfronter == "terra") ||
+        (choiseUser == "vento" && choiseConfronter == "agua") ||
+        (choiseUser == "vento" && choiseConfronter == "terra") ||
+        (choiseUser == "terra" && choiseConfronter == "fogo")
+    ) {
+      setState(() {
+        this._textDinamic = "Seu elemento triunfou, você VENCEU!";
+      });
+    }
+    else if (
+        (choiseConfronter == "fogo" && choiseUser == "vento") ||
+        (choiseConfronter == "agua" && choiseUser == "fogo") ||
+        (choiseConfronter == "agua" && choiseUser == "terra") ||
+        (choiseConfronter == "vento" && choiseUser == "agua") ||
+        (choiseConfronter == "vento" && choiseUser == "terra") ||
+        (choiseConfronter == "terra" && choiseUser == "fogo")
+    ) {
+      setState(() {
+        this._textDinamic = "Seu elemento não prevaleceu, você foi DERROTADO!";
+      });
+    } else {
+      setState(() {
+        this._textDinamic = "Houve choque de elementos portanto EMPATE!";
+      });
+    }
 
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,6 +113,7 @@ class _LayoutStfulState extends State<LayoutStful> {
             ),
            Text(
              "$_textDinamic",
+             textAlign: TextAlign.center,
              style: TextStyle(
                fontSize: 20,
                fontWeight: FontWeight.w500,
