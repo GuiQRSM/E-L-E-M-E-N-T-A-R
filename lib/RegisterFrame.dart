@@ -12,6 +12,7 @@ var primeColor = Color.fromARGB(200, 89, 8, 105);
 class _RegisterFrameState extends State<RegisterFrame> {
 
   TextEditingController _controllerEmail = TextEditingController();
+  TextEditingController _controllerPhoneNumber = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +45,8 @@ class _RegisterFrameState extends State<RegisterFrame> {
               decoration: InputDecoration(
                 labelText: "E-mail",
                 labelStyle: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
                   color: primeColor,
                 ),
               ),
@@ -55,6 +56,23 @@ class _RegisterFrameState extends State<RegisterFrame> {
                 color: primeColor,
               ),
               controller: _controllerEmail,
+            ),
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Phone Number",
+                labelStyle: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: primeColor,
+                ),
+              ),
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: primeColor,
+              ),
+              controller: _controllerPhoneNumber,
             ),
           ],
         ),
