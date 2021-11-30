@@ -83,6 +83,10 @@ class _RegisterFrameState extends State<RegisterFrame> {
               padding: EdgeInsets.only(top: 20),
             child: RaisedButton(
                 onPressed: (){
+                  setState(() {
+                    _textMutant = "Email: $_controllerEmail";
+                                  "PhoneNumber: $_controllerPhoneNumber";
+                  });
                 },
               padding: EdgeInsets.all(18),
               color: primeColor,
