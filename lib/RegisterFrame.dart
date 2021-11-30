@@ -22,6 +22,8 @@ class _RegisterFrameState extends State<RegisterFrame> {
         backgroundColor: primeColor,
       ),
       body: Container(
+        padding: EdgeInsets.all(16),
+        width: double.infinity,
         child: Column(
           children: <Widget>[
 
