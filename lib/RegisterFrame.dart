@@ -31,103 +31,107 @@ class _RegisterFrameState extends State<RegisterFrame> {
         backgroundColor: primeColor,
       ),
       body: Container(
-        padding: EdgeInsets.all(28),
         width: double.infinity,
-        child: Column(
-          children: <Widget>[
-            Padding(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.all(28),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 15),
-            child: Text(
-              "-s i n g  o u t-",
-              style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.w500,
-                color: Color.fromARGB(250, 171, 9, 128),
-              ),),
-            ),
-            TextField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                labelText: "E-mail",
-                labelStyle: TextStyle(
+                child: Text(
+                  "-s i n g  o u t-",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromARGB(250, 171, 9, 128),
+                  ),),
+              ),
+              TextField(
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  labelText: "E-mail",
+                  labelStyle: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: primeColor,
+                  ),
+                ),
+                style: TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w500,
                   color: primeColor,
                 ),
+                controller: _controllerEmail,
               ),
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: primeColor,
-              ),
-              controller: _controllerEmail,
-            ),
-            TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: "Phone Number",
-                labelStyle: TextStyle(
+              TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  labelText: "Phone Number",
+                  labelStyle: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: primeColor,
+                  ),
+                ),
+                style: TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w500,
                   color: primeColor,
                 ),
+                controller: _controllerPhoneNumber,
               ),
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: primeColor,
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: RaisedButton(
+                  onPressed: (){
+                    setState(() {
+                      _textMutant = "Email: " + _controllerEmail.text +
+                      "\nPhoneNumber: " + _controllerPhoneNumber.text;
+                    });
+                  },
+                  padding: EdgeInsets.all(18),
+                  color: primeColor,
+                  child: Text("Register",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),),
+                ),
               ),
-              controller: _controllerPhoneNumber,
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 20),
-            child: RaisedButton(
-                onPressed: (){
-                  setState(() {
-                    _textMutant = "Email: $_controllerEmail";
-                                  "PhoneNumber: $_controllerPhoneNumber";
-                  });
-                },
-              padding: EdgeInsets.all(18),
-              color: primeColor,
-              child: Text("Register",
-              style: TextStyle(
-                fontSize: 17,
-                fontWeight: FontWeight.w500,
-                color: Colors.white,
-              ),),
-             ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 13),
-            child: CheckboxListTile(
-              title: Text("Receber notificações via e-mail",
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w600,
-                color: primeColor,
-              ),),
-                activeColor: primeColor,
-                secondary: Icon(Icons.email,
-                color: primeColor,),
-                value: _choiseCkeck,
-                onChanged: (bool? vlr){
-                  setState(() {
-                    _choiseCkeck = vlr!;
-                  });
-                }),
-            ),
-            Padding(
+              Padding(
+                padding: EdgeInsets.only(top: 13),
+                child: CheckboxListTile(
+                    title: Text("Receber notificações via e-mail",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: primeColor,
+                      ),),
+                    activeColor: primeColor,
+                    secondary: Icon(Icons.email,
+                      color: primeColor,),
+                    value: _choiseCkeck,
+                    onChanged: (bool? vlr){
+                      setState(() {
+                        _choiseCkeck = vlr!;
+                      });
+                    }),
+              ),
+              Padding(
                 padding: EdgeInsets.only(top: 15),
-            child: Text(
-              "$_textMutant",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w600,
-                color: primeColor,
-              ),),
-            ),
-          ],
+                child: Text(
+                  "$_textMutant",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w600,
+                    color: primeColor,
+                  ),),
+              ),
+            ],
+          ),
         ),
       ),
     );
