@@ -19,6 +19,11 @@ class _RegisterFrameState extends State<RegisterFrame> {
 
   var _textMutant = "";
 
+  void _cleanFeld() {
+    _controllerEmail.text = "";
+    _controllerPhoneNumber.text = "";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,6 +94,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
                     setState(() {
                       _textMutant = "Email: " + _controllerEmail.text +
                       "\nPhoneNumber: " + _controllerPhoneNumber.text;
+                      _cleanFeld();
                     });
                   },
                   padding: EdgeInsets.all(18),
