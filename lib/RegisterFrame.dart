@@ -21,6 +21,13 @@ class _RegisterFrameState extends State<RegisterFrame> {
           ),),
         backgroundColor: primeColor,
       ),
+      body: Container(
+        child: Column(
+          children: <Widget>[
+
+          ],
+        ),
+      ),
     );
   }
 }
