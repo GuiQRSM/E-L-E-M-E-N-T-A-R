@@ -17,6 +17,8 @@ class _RegisterFrameState extends State<RegisterFrame> {
 
   var _choiseCkeck = false;
 
+  var _textMutant = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,6 +112,16 @@ class _RegisterFrameState extends State<RegisterFrame> {
                     _choiseCkeck = vlr!;
                   });
                 }),
+            ),
+            Padding(
+                padding: EdgeInsets.only(top: 15),
+            child: Text(
+              "$_textMutant",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w600,
+                color: primeColor,
+              ),),
             ),
           ],
         ),
