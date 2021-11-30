@@ -15,6 +15,8 @@ class _RegisterFrameState extends State<RegisterFrame> {
   TextEditingController _controllerEmail = TextEditingController();
   TextEditingController _controllerPhoneNumber = TextEditingController();
 
+  var _choiseCkeck = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,7 +81,6 @@ class _RegisterFrameState extends State<RegisterFrame> {
               padding: EdgeInsets.only(top: 20),
             child: RaisedButton(
                 onPressed: (){
-
                 },
               padding: EdgeInsets.all(18),
               color: primeColor,
@@ -90,6 +91,25 @@ class _RegisterFrameState extends State<RegisterFrame> {
                 color: Colors.white,
               ),),
              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 13),
+            child: CheckboxListTile(
+              title: Text("Receber notificações via e-mail",
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+                color: primeColor,
+              ),),
+                activeColor: primeColor,
+                secondary: Icon(Icons.email,
+                color: primeColor,),
+                value: _choiseCkeck,
+                onChanged: (bool? vlr){
+                  setState(() {
+                    _choiseCkeck = vlr!;
+                  });
+                }),
             ),
           ],
         ),
