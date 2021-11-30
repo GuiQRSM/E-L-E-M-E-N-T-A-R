@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegisterFrame extends StatefulWidget {
@@ -73,6 +74,22 @@ class _RegisterFrameState extends State<RegisterFrame> {
                 color: primeColor,
               ),
               controller: _controllerPhoneNumber,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+            child: RaisedButton(
+                onPressed: (){
+
+                },
+              padding: EdgeInsets.all(18),
+              color: primeColor,
+              child: Text("Register",
+              style: TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+              ),),
+             ),
             ),
           ],
         ),
