@@ -9,6 +9,8 @@ class ConfigFrame extends StatefulWidget {
 
 var primeColor = Color.fromARGB(200, 89, 8, 105);
 
+var _switchCongig = false;
+
 class _ConfigFrameState extends State<ConfigFrame> {
   @override
   Widget build(BuildContext context) {
@@ -24,11 +26,11 @@ class _ConfigFrameState extends State<ConfigFrame> {
       body: Container(
         width: double.infinity,
         child:  SingleChildScrollView(
-          padding: EdgeInsets.all(24),
+          padding: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.only(top: 4, bottom: 8),
                 child: Text(
                     "Configurações Gerais",
                 style: TextStyle(
@@ -36,6 +38,23 @@ class _ConfigFrameState extends State<ConfigFrame> {
                   fontWeight: FontWeight.w600,
                   color: primeColor,
                 ),),
+              ),
+              SwitchListTile(
+                  title: Text("Conectar seu perfil ao ranking",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: primeColor,
+                  ),),
+                  activeColor: primeColor,
+                  secondary: Icon(Icons.table_rows,
+                  color: primeColor,),
+                  value: _switchCongig,
+                  onChanged: (bool? vlr1){
+                    setState(() {
+                      _switchCongig = vlr1!;
+                    });
+                  },
               ),
             ],
           ),
