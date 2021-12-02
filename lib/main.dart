@@ -1,3 +1,4 @@
+import 'package:elementar_game/ConfigFrame.dart';
 import 'package:elementar_game/LayoutStful.dart';
 import 'package:elementar_game/RegisterFrame.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: LayoutStful(),
-      home: RegisterFrame(),
+      home: ConfigFrame(),
     ),
   );
 
