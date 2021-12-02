@@ -136,6 +136,22 @@ class _RegisterFrameState extends State<RegisterFrame> {
                     color: primeColor,
                   ),),
               ),
+              Padding(
+                  padding: EdgeInsets.only(top:62),
+                child: RaisedButton(
+                    onPressed: (){
+
+                    },
+                  color: primeColor,
+                child: Text(
+                    "Go to the Game",
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),),
+                ),
+              )
             ],
           ),
         ),
