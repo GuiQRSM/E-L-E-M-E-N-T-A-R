@@ -1,3 +1,4 @@
+import 'package:elementar_game/ConfigFrame.dart';
 import 'package:elementar_game/LayoutStful.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -150,12 +151,33 @@ class _RegisterFrameState extends State<RegisterFrame> {
                     },
                   color: primeColor,
                 child: Text(
-                    "Go to the Game",
+                    "Start",
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),),
+                ),
+              ),
+              Padding(
+                  padding: EdgeInsets.only(top: 5),
+                child:  RaisedButton(
+                  onPressed: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ConfigFrame(),
+                        ),
+                    );
+                  },
+                  color: primeColor,
+                  child: Text(
+                    "Settings",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),),
                 ),
               )
             ],

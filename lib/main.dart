@@ -10,7 +10,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: LayoutStful(),
-      home: ConfigFrame(),
+      home: RegisterFrame(),
     ),
   );
 
