@@ -13,6 +13,9 @@ var _switchCongig = false;
 var _switchCongig2 = false;
 
 var _checkConfig = false;
+var _checkConfig2 = false;
+
+var _evoValue = 0.0;
 
 class _ConfigFrameState extends State<ConfigFrame> {
   @override
@@ -92,7 +95,24 @@ class _ConfigFrameState extends State<ConfigFrame> {
                       _checkConfig = vlrc1!;
                     });
                   },
-              )
+              ),
+              CheckboxListTile(
+                  title: Text("Sincronizar com a conta Google",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                      color: primeColor,
+                    ),),
+                  value: _checkConfig2,
+                  activeColor: primeColor,
+                  secondary: Icon(Icons.perm_identity_rounded,
+                  color: primeColor,),
+                  onChanged: (bool? vlrc2){
+                    setState(() {
+                      _checkConfig2 = vlrc2!;
+                    });
+                  },
+              ),
             ],
           ),
         ),
