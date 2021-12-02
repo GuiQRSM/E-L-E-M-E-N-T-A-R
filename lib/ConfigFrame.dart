@@ -16,6 +16,7 @@ var _checkConfig = false;
 var _checkConfig2 = false;
 
 var _evoValue = 0.0;
+var _evoLabel = "";
 
 class _ConfigFrameState extends State<ConfigFrame> {
   @override
@@ -110,6 +111,32 @@ class _ConfigFrameState extends State<ConfigFrame> {
                   onChanged: (bool? vlrc2){
                     setState(() {
                       _checkConfig2 = vlrc2!;
+                    });
+                  },
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text(
+                    "Nível de Dificulade",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                    color: primeColor,
+                  ),
+                ),
+              ),
+              Slider(
+                  value: _evoValue,
+                  label: _evoLabel,
+                  divisions: 9,
+                  min: 0,
+                  max: 9,
+                  activeColor: primeColor,
+                  inactiveColor: Colors.deepPurpleAccent,
+                  onChanged: (double evovlr){
+                    setState(() {
+                      _evoValue = evovlr;
+                      _evoLabel = "Nível de Dificulade: $evovlr";
                     });
                   },
               ),
