@@ -21,6 +21,8 @@ class _RegisterFrameState extends State<RegisterFrame> {
 
   var _textMutant = "";
 
+  var supportingColor = Color.fromRGBO(252, 192, 228, 1);
+
   void _cleanFeld() {
     _controllerEmail.text = "";
     _controllerPhoneNumber.text = "";
