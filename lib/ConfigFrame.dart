@@ -12,6 +12,8 @@ var primeColor = Color.fromARGB(200, 89, 8, 105);
 var _switchCongig = false;
 var _switchCongig2 = false;
 
+var _checkConfig = false;
+
 class _ConfigFrameState extends State<ConfigFrame> {
   @override
   Widget build(BuildContext context) {
@@ -74,6 +76,23 @@ class _ConfigFrameState extends State<ConfigFrame> {
                     });
                   },
               ),
+              CheckboxListTile(
+                  title: Text("Exibir que está Online",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                      color: primeColor,
+                    ),),
+                  activeColor: primeColor,
+                  secondary: Icon(Icons.videogame_asset,
+                  color: primeColor,),
+                  value: _checkConfig,
+                  onChanged: (bool? vlrc1){
+                    setState(() {
+                      _checkConfig = vlrc1!;
+                    });
+                  },
+              )
             ],
           ),
         ),
