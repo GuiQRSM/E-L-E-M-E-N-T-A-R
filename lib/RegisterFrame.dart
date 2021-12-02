@@ -1,3 +1,4 @@
+import 'package:elementar_game/LayoutStful.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -140,7 +141,12 @@ class _RegisterFrameState extends State<RegisterFrame> {
                   padding: EdgeInsets.only(top:62),
                 child: RaisedButton(
                     onPressed: (){
-
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LayoutStful(),
+                          ),
+                      );
                     },
                   color: primeColor,
                 child: Text(
