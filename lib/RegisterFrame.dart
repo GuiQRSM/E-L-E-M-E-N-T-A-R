@@ -31,6 +31,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: supportingColor,
       appBar: AppBar(
         title: Text("E L E M E N T A R",
           style: TextStyle(
@@ -107,7 +108,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                      color: supportingColor,
                     ),),
                 ),
               ),
@@ -157,7 +158,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w500,
-                  color: Colors.white,
+                  color: supportingColor,
                 ),),
                 ),
               ),
@@ -178,7 +179,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                      color: supportingColor,
                     ),),
                 ),
               )
