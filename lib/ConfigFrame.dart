@@ -18,6 +18,8 @@ var _checkConfig2 = false;
 var _evoValue = 0.0;
 var _evoLabel = "";
 
+var _textMutant = "";
+
 class _ConfigFrameState extends State<ConfigFrame> {
   @override
   Widget build(BuildContext context) {
@@ -142,6 +144,39 @@ class _ConfigFrameState extends State<ConfigFrame> {
                     });
                   },
               ),
+              Padding(
+                  padding: EdgeInsets.only(top: 14, bottom: 7),
+                child: RaisedButton(
+                  onPressed: (){
+                    setState(() {
+                      _textMutant = "Switch 1: $_switchCongig\n"
+                                    "Switch 2: $_switchCongig2\n"
+                                    "Checkbox 1: $_checkConfig\n"
+                                    "Checkbox 2: $_checkConfig2\n"
+                                    "Slider: $_evoLabel";
+                    });
+                  },
+                  color: primeColor,
+                  child: Text(
+                    "Salvar",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 18),
+                child: Text(
+                    "$_textMutant",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: primeColor,
+                  ),
+                ),
+              )
             ],
           ),
         ),
