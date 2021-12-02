@@ -21,6 +21,26 @@ class _ConfigFrameState extends State<ConfigFrame> {
           ),),
         backgroundColor: primeColor,
       ),
+      body: Container(
+        width: double.infinity,
+        child:  SingleChildScrollView(
+          padding: EdgeInsets.all(24),
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(top: 5),
+                child: Text(
+                    "Configurações Gerais",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w600,
+                  color: primeColor,
+                ),),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
