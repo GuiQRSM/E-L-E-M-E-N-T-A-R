@@ -8,6 +8,7 @@ class ConfigFrame extends StatefulWidget {
 }
 
 var primeColor = Color.fromARGB(200, 89, 8, 105);
+var supportingColor = Color.fromRGBO(252, 192, 228, 1);
 
 var _switchCongig = false;
 var _switchCongig2 = false;
@@ -24,6 +25,7 @@ class _ConfigFrameState extends State<ConfigFrame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: supportingColor,
       appBar: AppBar(
         title: Text("E L E M E N T A R",
           style: TextStyle(
@@ -162,7 +164,7 @@ class _ConfigFrameState extends State<ConfigFrame> {
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                      color: supportingColor,
                     ),),
                 ),
               ),
