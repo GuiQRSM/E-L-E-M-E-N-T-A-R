@@ -35,11 +35,13 @@ class _ConfigFrameState extends State<ConfigFrame> {
         child:  SingleChildScrollView(
           padding: EdgeInsets.all(20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(top: 4, bottom: 8),
                 child: Text(
                     "Configurações Gerais",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w600,
