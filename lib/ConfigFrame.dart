@@ -10,6 +10,7 @@ class ConfigFrame extends StatefulWidget {
 var primeColor = Color.fromARGB(200, 89, 8, 105);
 
 var _switchCongig = false;
+var _switchCongig2 = false;
 
 class _ConfigFrameState extends State<ConfigFrame> {
   @override
@@ -53,6 +54,23 @@ class _ConfigFrameState extends State<ConfigFrame> {
                   onChanged: (bool? vlr1){
                     setState(() {
                       _switchCongig = vlr1!;
+                    });
+                  },
+              ),
+              SwitchListTile(
+                  title: Text("Ocultar placares",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                      color: primeColor,
+                    ),),
+                  activeColor: primeColor,
+                  secondary: Icon(Icons.score,
+                  color: primeColor,),
+                  value: _switchCongig2,
+                  onChanged: (bool? vlr2){
+                    setState(() {
+                      _switchCongig2 = vlr2!;
                     });
                   },
               ),
