@@ -12,6 +12,8 @@ class LayoutStful extends StatefulWidget {
 
 class _LayoutStfulState extends State<LayoutStful> {
 
+  var supportingColor = Color.fromRGBO(252, 192, 228, 1);
+
   var primeColor = Color.fromARGB(200, 89, 8, 105);
 
   var _dinamicImage = AssetImage("imgs/base2.png");
@@ -86,6 +88,7 @@ class _LayoutStfulState extends State<LayoutStful> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: supportingColor,
       appBar: AppBar(
         title: Text("E L E M E N T A R",
         style: TextStyle(
