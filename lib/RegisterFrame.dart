@@ -38,7 +38,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
       body: Container(
         width: double.infinity,
         child: SingleChildScrollView(
-          padding: EdgeInsets.all(28),
+          padding: EdgeInsets.all(24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
