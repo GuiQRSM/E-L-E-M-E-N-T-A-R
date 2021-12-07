@@ -157,7 +157,8 @@ class _ConfigFrameState extends State<ConfigFrame> {
                                     "Switch 2: $_switchCongig2\n"
                                     "Checkbox 1: $_checkConfig\n"
                                     "Checkbox 2: $_checkConfig2\n"
-                                    "Slider: $_evoLabel";
+                                    "Slider: $_evoLabel\n"
+                                    "Permisão de notificação por E-mail: ${widget.getInfo}";
                     });
                   },
                   color: primeColor,
