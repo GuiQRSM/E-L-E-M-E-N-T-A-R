@@ -169,7 +169,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ConfigFrame(),
+                            builder: (context) => ConfigFrame(getInfo: '',),
                         ),
                     );
                   },

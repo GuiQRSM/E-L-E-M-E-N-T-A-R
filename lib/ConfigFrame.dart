@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ConfigFrame extends StatefulWidget {
-  const ConfigFrame({Key? key}) : super(key: key);
+
+  String getInfo;
+  ConfigFrame({required this.getInfo});
 
   @override
   _ConfigFrameState createState() => _ConfigFrameState();
