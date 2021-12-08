@@ -24,14 +24,20 @@ class _MedalFrameState extends State<MedalFrame> {
               Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: Text(
-                    "Sua classe",
+                    "-Sua classe-",
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 38,
                   fontWeight: FontWeight.w600,
                   color: primeColor,
                   letterSpacing: 5,
                 ),),
-              )
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 24),
+                child: Image.asset(
+                    "Type_Meday/gold.png"
+                ),
+              ),
             ],
           ),
         ),
