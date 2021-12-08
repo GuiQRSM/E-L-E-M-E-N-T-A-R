@@ -38,6 +38,18 @@ class _MedalFrameState extends State<MedalFrame> {
                     "Type_Meday/gold.png"
                 ),
               ),
+              Padding(
+                  padding: EdgeInsets.only(top: 10),
+                child: Text(
+                    "GOLD class",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w600,
+                    color: primeColor,
+                    letterSpacing: 5,
+                  ),
+                ),
+              )
             ],
           ),
         ),
