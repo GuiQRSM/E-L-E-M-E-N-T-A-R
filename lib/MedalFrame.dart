@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MedalFrame extends StatefulWidget {
-  const MedalFrame({Key? key}) : super(key: key);
+
+  String getInfo;
+  MedalFrame(this.getInfo);
 
   @override
   _MedalFrameState createState() => _MedalFrameState();
