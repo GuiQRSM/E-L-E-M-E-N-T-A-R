@@ -65,6 +65,10 @@ flutter:
     - imgs/fogo.png
     - imgs/terra.png
     - imgs/vento.png
+    - Type_Meday/gold.png
+    - Type_Meday/plate.png
+    - Type_Meday/diamond.png
+    - Type_Meday/bronze.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
