@@ -17,14 +17,24 @@ class _MedalFrameState extends State<MedalFrame> {
   Widget build(BuildContext context) {
 
     var _dinamicImage;
-    if(widget.getInfo == "gold"){
-      _dinamicImage = Image.asset("Type_Meday/gold.png");
-    }else if(widget.getInfo == "plate"){
-      _dinamicImage = Image.asset("Type_Meday/plate.png");
-    }else if(widget.getInfo == "bronze"){
-      _dinamicImage = Image.asset("Type_Meday/bromze.png");
-    }else if(widget.getInfo == "diamond"){
-      _dinamicImage = Image.asset("Type_Medy/diamond.png");
+    switch(widget.getInfo){
+
+      case "gold" :
+        _dinamicImage = "Type_Meday/gold.png";
+        break;
+
+      case "plate" :
+        _dinamicImage = "Type_Meday/plate.png";
+        break;
+
+      case "bronze" :
+        _dinamicImage = "Type_Meday/bronze.png";
+        break;
+
+      case "diamond" :
+        _dinamicImage = "Type_Meday/bronze.png";
+        break;
+
     }
 
 
@@ -50,7 +60,7 @@ class _MedalFrameState extends State<MedalFrame> {
               Padding(
                 padding: EdgeInsets.only(top: 24),
                 child: Image.asset(
-                    ""
+                    _dinamicImage,
                 ),
               ),
               Padding(
