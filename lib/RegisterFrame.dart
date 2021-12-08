@@ -33,6 +33,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
   void _bringFrame (){
 
     var listMedal = ["gold", "plate", "bronze", "diamond"];
+    var medalRandom = Random().nextInt(listMedal.length);
 
     Navigator.push(
       context,
