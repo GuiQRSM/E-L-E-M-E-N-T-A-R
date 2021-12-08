@@ -15,6 +15,9 @@ var supportingColor = Color.fromRGBO(252, 192, 228, 1);
 class _MedalFrameState extends State<MedalFrame> {
   @override
   Widget build(BuildContext context) {
+
+    var dinamicImage;
+
     return Scaffold(
       backgroundColor: supportingColor,
       body: Container(
