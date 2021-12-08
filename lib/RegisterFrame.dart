@@ -180,9 +180,27 @@ class _RegisterFrameState extends State<RegisterFrame> {
                       fontSize: 17,
                       fontWeight: FontWeight.w500,
                       color: supportingColor,
-                    ),),
+                    ),
+                  ),
                 ),
-              )
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 5),
+                child: RaisedButton(
+                    onPressed: (){
+
+                    },
+                  color: primeColor,
+                  child: Text(
+                    "Hall  of Medal",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                      color: supportingColor,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
