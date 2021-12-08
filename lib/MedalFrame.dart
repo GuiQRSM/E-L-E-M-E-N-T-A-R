@@ -13,6 +13,8 @@ var supportingColor = Color.fromRGBO(252, 192, 228, 1);
 class _MedalFrameState extends State<MedalFrame> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: supportingColor,
+    );
   }
 }
