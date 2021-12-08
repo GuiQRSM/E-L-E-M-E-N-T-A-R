@@ -1,5 +1,6 @@
 import 'package:elementar_game/ConfigFrame.dart';
 import 'package:elementar_game/LayoutStful.dart';
+import 'package:elementar_game/MedalFrame.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -188,7 +189,12 @@ class _RegisterFrameState extends State<RegisterFrame> {
                 padding: EdgeInsets.only(top: 5),
                 child: RaisedButton(
                     onPressed: (){
-
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MedalFrame(),
+                          ),
+                      );
                     },
                   color: primeColor,
                   child: Text(
