@@ -7,6 +7,9 @@ class MedalFrame extends StatefulWidget {
   _MedalFrameState createState() => _MedalFrameState();
 }
 
+var primeColor = Color.fromARGB(200, 89, 8, 105);
+var supportingColor = Color.fromRGBO(252, 192, 228, 1);
+
 class _MedalFrameState extends State<MedalFrame> {
   @override
   Widget build(BuildContext context) {
