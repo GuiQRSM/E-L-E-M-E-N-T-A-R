@@ -21,7 +21,17 @@ class _MedalFrameState extends State<MedalFrame> {
           padding: EdgeInsets.all(24),
           child: Column(
             children: <Widget>[
-
+              Padding(
+                padding: EdgeInsets.only(top: 15),
+                child: Text(
+                    "Sua classe",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w600,
+                  color: primeColor,
+                  letterSpacing: 5,
+                ),),
+              )
             ],
           ),
         ),
