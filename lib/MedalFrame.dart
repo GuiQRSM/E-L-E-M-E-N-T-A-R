@@ -15,6 +15,17 @@ class _MedalFrameState extends State<MedalFrame> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: supportingColor,
+      body: Container(
+        width: double.infinity,
+        child: SingleChildScrollView(
+          padding: EdgeInsets.all(24),
+          child: Column(
+            children: <Widget>[
+
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
