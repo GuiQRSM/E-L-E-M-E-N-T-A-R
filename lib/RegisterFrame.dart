@@ -3,6 +3,7 @@ import 'package:elementar_game/LayoutStful.dart';
 import 'package:elementar_game/MedalFrame.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class RegisterFrame extends StatefulWidget {
   const RegisterFrame({Key? key}) : super(key: key);
@@ -27,6 +28,19 @@ class _RegisterFrameState extends State<RegisterFrame> {
   void _cleanFeld() {
     _controllerEmail.text = "";
     _controllerPhoneNumber.text = "";
+  }
+
+  void _bringFrame (){
+
+    var listMedal = ["gold", "plate", "bronze", "diamond"];
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MedalFrame(),
+      ),
+    );
+
   }
 
   @override
@@ -188,14 +202,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
               Padding(
                 padding: EdgeInsets.only(top: 5),
                 child: RaisedButton(
-                    onPressed: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MedalFrame(),
-                          ),
-                      );
-                    },
+                    onPressed: _bringFrame,
                   color: primeColor,
                   child: Text(
                     "Hall  of Medal",
