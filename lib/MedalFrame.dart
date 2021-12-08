@@ -16,7 +16,17 @@ class _MedalFrameState extends State<MedalFrame> {
   @override
   Widget build(BuildContext context) {
 
-    var dinamicImage;
+    var _dinamicImage;
+    if(widget.getInfo == "gold"){
+      _dinamicImage = Image.asset("Type_Meday/gold.png");
+    }else if(widget.getInfo == "plate"){
+      _dinamicImage = Image.asset("Type_Meday/plate.png");
+    }else if(widget.getInfo == "bronze"){
+      _dinamicImage = Image.asset("Type_Meday/bromze.png");
+    }else if(widget.getInfo == "diamond"){
+      _dinamicImage = Image.asset("Type_Medy/diamond.png");
+    }
+
 
     return Scaffold(
       backgroundColor: supportingColor,
@@ -40,7 +50,7 @@ class _MedalFrameState extends State<MedalFrame> {
               Padding(
                 padding: EdgeInsets.only(top: 24),
                 child: Image.asset(
-                    "Type_Meday/gold.png"
+                    ""
                 ),
               ),
               Padding(
