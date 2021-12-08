@@ -16,6 +16,8 @@ class _MedalFrameState extends State<MedalFrame> {
   @override
   Widget build(BuildContext context) {
 
+    var _dinamicSubtext;
+
     var _dinamicImage;
     switch(widget.getInfo){
 
@@ -32,7 +34,7 @@ class _MedalFrameState extends State<MedalFrame> {
         break;
 
       case "diamond" :
-        _dinamicImage = "Type_Meday/bronze.png";
+        _dinamicImage = "Type_Meday/diamond.png";
         break;
 
     }
