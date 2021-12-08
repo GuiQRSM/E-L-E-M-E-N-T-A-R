@@ -69,6 +69,7 @@ flutter:
     - Type_Meday/plate.png
     - Type_Meday/diamond.png
     - Type_Meday/bronze.png
+    - Type_Meday/backbutton.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -50,7 +50,7 @@ class _RegisterFrameState extends State<RegisterFrame> {
               Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 15),
                 child: Text(
-                  "-s i n g  o u t-",
+                  "-s i n g  i n-",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 26,
