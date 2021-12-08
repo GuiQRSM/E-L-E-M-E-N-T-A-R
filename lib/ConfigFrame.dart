@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ConfigFrame extends StatefulWidget {
 
   String getInfo;
-  ConfigFrame({required this.getInfo});
+  ConfigFrame(this.getInfo);
 
   @override
   _ConfigFrameState createState() => _ConfigFrameState();
@@ -158,7 +158,7 @@ class _ConfigFrameState extends State<ConfigFrame> {
                                     "Checkbox 1: $_checkConfig\n"
                                     "Checkbox 2: $_checkConfig2\n"
                                     "Slider: $_evoLabel\n"
-                                    "Permisão de notificação por E-mail: ${widget.getInfo}";
+                                    "Notificação por E-mail: ${widget.getInfo}";
                     });
                   },
                   color: primeColor,
